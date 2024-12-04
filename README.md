@@ -3,7 +3,7 @@
  <img width=200px height=200px src="https://github.com/ShirelSaadonA/Self-Driving/blob/main/frame_4204.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">SELF DRIVING</h3>
 
 <div align="center">
 
@@ -20,95 +20,74 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+# Self-Driving Assistance System
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This project is focused on creating a **real-time driver assistance system** using advanced deep learning techniques. The system is designed to enhance road safety by detecting lanes, monitoring deviations, and identifying various road objects.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+---
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+## **Features**
 
-### Prerequisites
+### **1. Lane Detection and Deviation Warning**
+- **Purpose:** Identify the current driving lane boundaries in real time and calculate the vehicle's distance from the left and right lane edges.
+- **Goal:** Alert the driver when the vehicle deviates from its lane, improving safety.
+- **Dataset:** Trained on the **CULane dataset**, ensuring robust performance in diverse driving conditions.
 
-What things you need to install the software and how to install them.
+### **2. Object Detection and Classification**
+- **Purpose:** Detect and classify road objects to improve situational awareness:
+  - **Vehicles:** Cars, buses, trucks, motorcycles, bicycles.
+  - **Pedestrians:** Recognize and track people on the road.
+  - **Traffic Signs:** Detect and identify traffic lights and stop signs.
+- **Technology:** The object detection model is based on **YOLOv5**, with weights converted to TensorRT (TRT) for optimized performance on the NVIDIA Jetson Nano.
 
+---
+
+## **Technologies and Tools**
+### CUDA 
+- **Frameworks:** YOLOv5, TensorRT, NVIDIA DeepStream, ONNX.
+- **Dataset:**
+  - **Lane Detection:** CULane dataset.
+  - **Object Detection:** Custom dataset fine-tuned on YOLOv5.
+- **Hardware:** Optimized for NVIDIA Jetson Nano to enable edge computing.
+
+---
+
+
+
+
+## Howto
+
+### Download ONNX Model
+
+Clone PINTO_model_zoo repository and download Ultra-Fast-Lane-Detection
+ model.
 ```
-Give examples
+git clone https://github.com/PINTO0309/PINTO_model_zoo.git
+cd PINTO_model_zoo/140_Ultra-Fast-Lane-Detection/
+./download.sh
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
+Check `trtexec`
 ```
-Give the example
-```
+/usr/src/tensorrt/bin/trtexec --onnx=./saved_model_culane/ultra_falst_lane_detection_culane_288x800.onnx
 
-And repeat
+or
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+/usr/src/tensorrt/bin/trtexec --onnx=./saved_model_tusimple/ultra_falst_lane_detection_tusimple_288x800.onnx
 ```
 
-## 🎈 Usage <a name="usage"></a>
+### Convert ONNX Model to TensorRT Serialize engine file.
 
-Add notes about how to use the system.
+### Run 
+```
+python3 main.py \
+    --model ultra_falst_lane_detection_culane_288x800.trt
+    --model_config culane --videopath ... --output test.mp4
 
-## 🚀 Deployment <a name = "deployment"></a>
+```
 
-Add additional notes about how to deploy this on a live system.
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## TEST
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+![Image](frame_4213.png)
