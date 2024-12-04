@@ -1,12 +1,10 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="[https://i.imgur.com/6wj0hh6.jpg](https://github.com/ShirelSaadonA/Self-Driving/blob/main/test/Screenshot%20from%202024-12-04%2017-44-37.png)" alt="Project logo"></a>
 </p>
 <<<<<<< HEAD
 
-=======
-<a href="https://www.flaticon.com/free-icons/mobility" title="mobility icons">Mobility icons created by kmg design - Flaticon</a>
->>>>>>> be89415c5e5c7104d95351c8c52b9aa8519811e0
+
 <h3 align="center">SELF DRIVING</h3>
 
 <div align="center">
