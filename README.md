@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://github.com/ShirelSaadonA/Self-Driving/blob/main/test/Screenshot%20from%202024-12-04%2017-44-37.png" alt="Project logo"></a>
 </p>
-<<<<<<< HEAD
+
 
 
 <h3 align="center">SELF DRIVING</h3>
@@ -17,7 +17,6 @@
 </div>
 
 
-<<<<<<< HEAD
 # Self-Driving Assistance System
 
 This project is focused on creating a **real-time driver assistance system** using advanced deep learning techniques. The system is designed to enhance road safety by detecting lanes, monitoring deviations, and identifying various road objects.
@@ -41,12 +40,14 @@ This project is focused on creating a **real-time driver assistance system** usi
 ---
 
 ## **Technologies and Tools**
-### CUDA 
+ 
 - **Frameworks:** YOLOv5, TensorRT, NVIDIA DeepStream, ONNX.
 - **Dataset:**
   - **Lane Detection:** CULane dataset.
   - **Object Detection:** Custom dataset fine-tuned on YOLOv5.
-- **Hardware:** Optimized for NVIDIA Jetson Nano to enable edge computing.
+- **Hardware:**
+  ### CUDA
+- Optimized for NVIDIA Jetson Nano to enable edge computing.
 
 ---
 
