@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="[https://i.imgur.com/6wj0hh6.jpg](https://github.com/ShirelSaadonA/Self-Driving/blob/main/test/Screenshot%20from%202024-12-04%2017-44-37.png)" alt="Project logo"></a>
+ <img width=200px height=200px src="https://github.com/ShirelSaadonA/Self-Driving/blob/main/test/Screenshot%20from%202024-12-04%2017-44-37.png" alt="Project logo"></a>
 </p>
 <<<<<<< HEAD
 
