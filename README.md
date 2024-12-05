@@ -42,13 +42,22 @@ This project is focused on creating a **real-time driver assistance system** usi
 ---
 
 ## **Technologies and Tools**
-- **Frameworks:** YOLOv5, TensorRT, NVIDIA DeepStream, ONNX.
-- **Dataset:**
-  - **Lane Detection:** CULane dataset.
-  - **Object Detection:** Custom dataset fine-tuned on YOLOv5.
-- **Hardware:**
-- ### CUDA 
--  Optimized for NVIDIA Jetson Nano to enable edge computing.
+
+### **Frameworks**
+- **YOLOv5**: Advanced object detection framework used for identifying vehicles, pedestrians, traffic signs, and other objects with high accuracy.  
+- **TensorRT**: NVIDIA's high-performance deep learning inference library, used to optimize YOLOv5 and lane detection models for deployment on edge devices.  
+- **NVIDIA DeepStream**: End-to-end streaming analytics framework, enabling efficient processing of video feeds and integration of multiple AI models.  
+- **ONNX**: Open Neural Network Exchange format, used to convert and integrate pre-trained models like the lane detection model for cross-platform compatibility.  
+
+### **Datasets**
+- **Lane Detection**: Leveraged the **CULane dataset**, which includes diverse scenarios such as urban roads, highways, and challenging weather conditions. The dataset was used to train and test the lane detection model.  
+- **Object Detection**: Fine-tuned YOLOv5 using a **custom dataset**, tailored to recognize specific classes such as cars, buses, motorcycles, bicycles, and traffic signs. The dataset includes annotated images for optimal performance in real-world applications.  
+
+### **Hardware**
+- **NVIDIA Jetson Nano**: Designed for edge computing applications, offering a compact and power-efficient platform for deploying AI models.  
+- **CUDA**: NVIDIA's parallel computing platform and API, used to accelerate deep learning computations on the Jetson Nano.  
+- **Hardware Optimization**: TensorRT and DeepStream ensure that models run efficiently, maximizing inference speed and accuracy while minimizing latency on the Jetson Nano device.
+
 
 ---
 
