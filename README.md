@@ -42,12 +42,13 @@ This project is focused on creating a **real-time driver assistance system** usi
 ---
 
 ## **Technologies and Tools**
-### CUDA 
 - **Frameworks:** YOLOv5, TensorRT, NVIDIA DeepStream, ONNX.
 - **Dataset:**
   - **Lane Detection:** CULane dataset.
   - **Object Detection:** Custom dataset fine-tuned on YOLOv5.
-- **Hardware:** Optimized for NVIDIA Jetson Nano to enable edge computing.
+- **Hardware:**
+- ### CUDA 
+-  Optimized for NVIDIA Jetson Nano to enable edge computing.
 
 ---
 
